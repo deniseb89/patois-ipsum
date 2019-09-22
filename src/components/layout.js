@@ -28,17 +28,32 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
+          height: `85vh`,
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
+          padding: `6.3rem 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
-        <footer>
+        <main
+          style={{
+            minHeight: `80vh`
+          }}
+        >{children}</main>
+        <footer
+          style={{
+            color: `white`
+          }}
+        >
           © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a
+            style={{
+              color: `white`
+            }}
+            href="https://www.gatsbyjs.org"
+          >
+            Gatsby
+          </a>
         </footer>
       </div>
     </>
