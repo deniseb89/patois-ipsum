@@ -9,10 +9,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-attachment: fixed;
   background-image: url('../images/silky_flag.jpeg');
-  background-position: center bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+}
+@media (max-width: 750px) {
+  body {
+    background-position: center bottom;
+  }
 }
 article,
 aside,

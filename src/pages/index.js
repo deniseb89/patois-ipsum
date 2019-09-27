@@ -8,12 +8,22 @@ class IndexPage extends React.Component {
   constructor() {
     super();
     this.state = {
+      copied: `Copy Text`,
       text: null
     };
   }
 
+  copyText() {
+    let copyText = document.getElementById("copyText").innerText
+    navigator.clipboard.writeText(copyText)
+    this.setState({
+      copied: `Copied! ✓`
+    })
+  }
+
   generateText() {
     this.setState({
+      copied: `Copy Text`,
       text: <Text/>
     });
   }
@@ -42,22 +52,39 @@ class IndexPage extends React.Component {
         >
           Click the button below to generate a passage of dummy text, Jamaican Patois style.
         </p>
-        <button
-          style={{
-            backgroundColor: `#1f1c1c`,
-            borderRadius: `5px`,
-            color: `white`,
-            display: `block`,
-            fontWeight: `bold`,
-            margin: `0 auto`,
-            padding: `0.5rem 0`,
-            textAlign: `center`,
-            width: `10rem`
-          }}
-          onClick={this.generateText.bind(this)}
-        >
-          Gi mi di ting
-        </button>
+        <div style={{textAlign: `center`}}>
+          <button
+            style={{
+              backgroundColor: `#1f1c1c`,
+              borderRadius: `5px`,
+              color: `white`,
+              cursor: `pointer`,
+              fontWeight: `bold`,
+              padding: `0.5rem 0`,
+              textAlign: `center`,
+              width: `10rem`
+            }}
+            onClick={this.generateText.bind(this)}
+          >
+            Gi mi di ting
+          </button>
+          <button
+            id="copyBtn"
+            onClick={this.copyText.bind(this)}
+            style={{
+              background: `none`,
+              border: `none`,
+              color: `white`,
+              cursor: `pointer`,
+              fontSize: `large`,
+              textAlign: `center`,
+              textDecoration: `underline`,
+              textShadow: `1px 1px 2px #1f1c1c`
+            }}
+          >
+            {this.state.copied}
+          </button>
+        </div>
         <div>{this.state.text}</div>
       </Layout>
     )
