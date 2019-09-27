@@ -62,7 +62,7 @@ class IndexPage extends React.Component {
               fontWeight: `bold`,
               padding: `0.5rem 0`,
               textAlign: `center`,
-              width: `10rem`
+              width: `10rem`,
             }}
             onClick={this.generateText.bind(this)}
           >
@@ -79,7 +79,7 @@ class IndexPage extends React.Component {
               fontSize: `large`,
               textAlign: `center`,
               textDecoration: `underline`,
-              textShadow: `1px 1px 2px #1f1c1c`
+              textShadow: `1px 1px 2px #1f1c1c`,
             }}
           >
             {this.state.copied}
