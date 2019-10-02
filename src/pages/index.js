@@ -68,22 +68,24 @@ class IndexPage extends React.Component {
           >
             Gi mi di ting
           </button>
-          <button
-            id="copyBtn"
-            onClick={this.copyText.bind(this)}
-            style={{
-              background: `none`,
-              border: `none`,
-              color: `white`,
-              cursor: `pointer`,
-              fontSize: `large`,
-              textAlign: `center`,
-              textDecoration: `underline`,
-              textShadow: `1px 1px 2px #1f1c1c`
-            }}
-          >
-            {this.state.copied}
-          </button>
+          {this.state.text &&
+            <button
+              id="copyBtn"
+              onClick={this.copyText.bind(this)}
+              style={{
+                background: `none`,
+                border: `none`,
+                color: `white`,
+                cursor: `pointer`,
+                fontSize: `large`,
+                textAlign: `center`,
+                textDecoration: `underline`,
+                textShadow: `1px 1px 2px #1f1c1c`
+              }}
+            >
+              {this.state.copied}
+            </button>
+          }
         </div>
         <div>{this.state.text}</div>
       </Layout>
