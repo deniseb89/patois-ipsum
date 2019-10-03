@@ -5,10 +5,10 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `#1f1c1c`,
-      WebkitBoxShadow: `0px 2px 5px 0px rgba(30, 47, 31, 1)`,
-      MozBoxShadow: `0px 2px 5px 0px rgba(30, 47, 31, 1)`,
-      boxShadow: `0px 2px 5px 0px rgba(30, 47, 31, 1)`,
+      background: `rgba(31, 28, 28, 0.8)`,
+      WebkitBoxShadow: `0px 2px 5px 0px rgba(30, 47, 31, 0.9)`,
+      MozBoxShadow: `0px 2px 5px 0px rgba(30, 47, 31, 0.9)`,
+      boxShadow: `0px 2px 5px 0px rgba(30, 47, 31, 0.9)`,
       color: `white`,
       height: `5.35rem`,
       marginBottom: `1.45rem`,
