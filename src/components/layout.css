@@ -8,6 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-attachment: fixed;
+  background-color: #1f1c1c;
   background-image: url('../images/silky_flag.jpeg');
   background-position: center;
   background-repeat: no-repeat;
