@@ -35,6 +35,8 @@ class IndexPage extends React.Component {
         <h1
           style={{
             color: `white`,
+            marginLeft: `2rem`,
+            marginRight: `2rem`,
             textAlign: `center`,
             textShadow: `1px 1px 2px #1f1c1c`
           }}
@@ -46,6 +48,8 @@ class IndexPage extends React.Component {
             color: `white`,
             fontSize: `x-large`,
             lineHeight: `normal`,
+            marginLeft: `2rem`,
+            marginRight: `2rem`,
             textAlign: `center`,
             textShadow: `1px 1px 2px #1f1c1c`
           }}

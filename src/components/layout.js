@@ -36,7 +36,8 @@ const Layout = ({ children }) => {
       >
         <main
           style={{
-            minHeight: `80vh`
+            minHeight: `80vh`,
+            margin: `0 1rem`
           }}
         >{children}</main>
         <footer
