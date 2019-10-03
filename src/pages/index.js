@@ -6,7 +6,7 @@ import Text from "../components/text"
 
 class IndexPage extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
       copied: `Copy Text`,
       text: null
@@ -25,7 +25,7 @@ class IndexPage extends React.Component {
     this.setState({
       copied: `Copy Text`,
       text: <Text/>
-    });
+    })
   }
 
   render() {

@@ -1,12 +1,32 @@
 import React from 'react'
-import Paragraph from './paragraph.js'
+import { Patois } from '../patois'
 
 class Text extends React.Component {
-  render() {
-    let paragraphs = []
-    for (var p=0; p < 3; p++) {
-      paragraphs.push(<Paragraph key={p}/>)
+  getSentenceIndices() {
+    const indices = new Set();
+    let arrLength = Patois.length-1
+    for(let i=0; i<12; i++) {
+      let rand = Math.floor(Math.random() * arrLength)
+      while (indices.has(rand)) {
+        rand = Math.floor(Math.random() * arrLength--)
+      }
+      indices.add(rand)
     }
+    return indices
+  }
+
+  generateParagraphs() {
+    let indices = this.getSentenceIndices()
+    let paragraphs = []
+    indices.forEach(value => {
+      paragraphs.push(
+        <span>{Patois[value]}</span>
+      )
+    })
+    return paragraphs
+  }
+
+  render() {
     return (
       <div id="copyText"
         style={{
@@ -17,7 +37,7 @@ class Text extends React.Component {
           padding: `0.75rem`,
         }}
       >
-        {paragraphs}
+        {this.generateParagraphs()}
       </div>
     )
   }
